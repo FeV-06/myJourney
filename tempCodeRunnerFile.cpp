@@ -1,0 +1,1 @@
+std::cout << "The number of ONES in " << B.getValue() << " is " << B.countOnes() << std::endl;
