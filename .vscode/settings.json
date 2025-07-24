@@ -79,7 +79,8 @@
         "xtree": "cpp",
         "xutility": "cpp",
         "coroutine": "cpp",
-        "resumable": "cpp"
+        "resumable": "cpp",
+        "sstream": "cpp"
     },
     "C_Cpp.default.compilerPath": "C:/mingw-w64/mingw64/bin/gcc.exe"
 }
