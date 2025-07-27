@@ -127,7 +127,7 @@ int main()
     // std::cout << cchange << std::endl;
     // std::cout << (char)cchange << std::endl;
 
-    // String Manipulation
+        // String Manipulation
     // std::string str = "Hello World!";
     // std::cout << "Displaying the character at index 4: " << str.at(4) << std::endl;
     // std::cout << "Displaying the character at index 4 using array manipulation: " << str[4] << std::endl;
@@ -141,7 +141,7 @@ int main()
     // std::getline(std::cin, str);
     // std::cout << "Your Input: " << str;
 
-    // Earth Surface Distance
+        // Earth Surface Distance
     // double distance, la1, la2, lo1, lo2;
     // std::cout << "Enter latitude of coordinate 1: ";
     // std::cin >> la1;
@@ -160,27 +160,27 @@ int main()
     // distance = distanceOnEarth(la1, la2, lo1, lo2);
     // std::cout << "The distance between the two points is: " << distance << std::endl;
 
-    // Add Binary Numbers
+        // Add Binary Numbers
     // long bn1, bn2;
     // std::cout << "Enter the first binary number: ";std::cin >> bn1;
     // std::cout << "Enter the second binary number: ";std::cin >> bn2;
     // int* result = addTwoBinaryNumbers(bn1, bn2);
 
-    // Swap First and Last Number With Each Other
+        // Swap First and Last Number With Each Other
     // int num = 2345;
     // std::cout << swapFirstLastNumber(num);
 
-    // Closest or Max Twin Prime Below n             Sieve of Eratosthenes
+        // Closest or Max Twin Prime Below n             Sieve of Eratosthenes
     // int num = 15;
     // SoE(num);
 
 
-    // Top 3 Highest Numbers in Vector
+        // Top 3 Highest Numbers in Vector
     // std::vector<int> vec;
     // threeHighestNumbers(vec);
 
 
-    // Digit Counting
+        // Digit Counting
     // long long int digit = 32043813121313;
     // std::cout << longlongIntCountDigits(digit);
     return 0;
