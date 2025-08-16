@@ -2,6 +2,7 @@
 #include <array>
 #include <math.h>
 #include <algorithm>
+#include "array.h"
 
 void swapNumbers(int *num1, int *num2){
     int temp = *num1;

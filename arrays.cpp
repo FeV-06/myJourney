@@ -1,4 +1,5 @@
-#include <C:\GitRepos\myJourney\arrays.h>
+#include <iostream>
+#include "array.h"
 
 int main(){
         // Sum of Odd and Even Numbers
@@ -60,7 +61,7 @@ int main(){
             // Optimized Next Greater Element For Every Array Element
     // unsigned int size = 6;
     // int arr[size] = {23,1,43,23,11,4};
-    // nextGreaterElementForEveryElement(arr, size);
+    // optNextGreaterElementForEveryElement(arr, size);
 
 
         // Wave Form Sorting of an Array

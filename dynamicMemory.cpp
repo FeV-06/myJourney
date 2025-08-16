@@ -1,5 +1,6 @@
+#include <iostream>
 #include <string>
-#include <C:\GitRepos\myJourney\arrays.h>
+#include "array.h"
 
 class myClass
 {
@@ -10,6 +11,13 @@ public:
         std::cout << "Dynamic Object" << std::endl;
     }
 };
+
+struct myStruct{
+    int id;
+    std::string name;
+    std::string country;
+};
+
 
 int main(){
         // Dynamically Allocating Basic Types
@@ -69,6 +77,22 @@ int main(){
 
 
         // Dynamically Allocate Memory for a Structer and Input its Memebers
-    
+    // myStruct *employeeStruct = new myStruct;
+
+    // std::cout << "Enter employee ID: ";
+    // std::cin >> employeeStruct -> id;
+    // std::cout << "Enter employee NAME: ";
+    // std::cin.ignore();
+    // std::getline(std::cin, employeeStruct -> name);
+    // std::cout << "Enter employee's COUNTRY: ";
+    // std::getline(std::cin, employeeStruct -> country);
+
+    // std::cout << "Employee Details -->\nName: " << employeeStruct -> name;
+    // std::cout << "\nID: " << employeeStruct -> id;
+    // std::cout << "\nCountry: " << employeeStruct -> country;
+    // delete employeeStruct;
+
+
+        // 
     return 0;
 }
