@@ -27,7 +27,10 @@ void nextGreaterElementForEveryElement(int *arr, const unsigned int &size);
 
 void optNextGreaterElementForEveryElement(int *arr, const unsigned int &size);
 
-void waveFormSortingArray(int *arr, const unsigned int size);
+void waveFormSortingArray(int *arr, const unsigned int &size);
 
+int *sortArray(int *arr, const unsigned int &size);
+
+void reverseArray(int *arr, const unsigned int &size);
 
 #endif

@@ -52,7 +52,7 @@ int linearSearchArray(const int *arr, const int &size, int target){
 }
 
 int binarySearchArray(int* arr, const int &size, int target){
-    std::sort(arr, arr + size - 1);
+    std::sort(arr, arr + size);
     int start = 0, end = size - 1, mid = start + (end - start) / 2;
     while(start <= end){
         mid = start + (end - start) / 2;
@@ -131,10 +131,26 @@ void optNextGreaterElementForEveryElement(int *arr, const unsigned int &size){
     }
 }
 
-void waveFormSortingArray(int *arr, const unsigned int size){
+void waveFormSortingArray(int *arr, const unsigned int &size){
     std::sort(arr, arr + size);
 
     for(int i = 0; i < size - 1; i += 2){
         swapNumbers(&arr[i], &arr[i+1]);
+    }
+}
+
+int *sortArray(int *arr, const unsigned int &size){
+    std::sort(arr, arr + size);
+    return arr;
+}
+
+void reverseArray(int *arr, const unsigned int &size){
+    int st = 0, end = size - 1, temp = -1;
+    
+    while(st <= end){
+        temp = arr[st];
+        arr[st] = arr[end];
+        arr[end] = temp;
+        st++; end--;
     }
 }
