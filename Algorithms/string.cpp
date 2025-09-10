@@ -3,7 +3,7 @@
 #include <vector>
 #include <algorithm>
 
-void MreverseCharArray(char *chArr, const unsigned int &size){
+void reverseCharArray_M(char *chArr, const unsigned int &size){
     int st = 0, end = size - 1;
 
     while(st < end){
@@ -13,11 +13,11 @@ void MreverseCharArray(char *chArr, const unsigned int &size){
     }
 }
 
-void MreverseString(std::string &s){
+void reverseChar_M(std::string &s){
     std::reverse(s.begin(), s.end());
 }
 
-void BF_MreverseVowels(std::string &s) {
+void BF_reverseVowels_M(std::string &s) {
     std::vector<char> vec = {'A', 'E', 'I', 'O', 'U', 'a', 'e', 'i', 'o', 'u'};
         
     int st = 0, end = s.length() - 1;
@@ -32,11 +32,11 @@ void BF_MreverseVowels(std::string &s) {
 }
 
 bool isVowel(char ch){
-        if(ch == 'A' || ch == 'E' || ch == 'I' || ch == 'O' || ch == 'U' || ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u') return true;
-        return false;
-    }
+    if(ch == 'A' || ch == 'E' || ch == 'I' || ch == 'O' || ch == 'U' || ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u') return true;
+    return false;
+}
 
-void MreverseVowels(std::string &s) {
+void reverseVowels_M(std::string &s) {
     int st = 0, end = s.length() - 1;
 
     while(st < end){
@@ -53,7 +53,7 @@ bool isValid(char ch){
     return false;
 }
 
-bool isPalindrome(const std::string &s){
+bool isPalindrome_N(const std::string &s){
     int st = 0, end = s.length() - 1;
 
     while(st < end){
@@ -64,10 +64,50 @@ bool isPalindrome(const std::string &s){
     return true;
 }
 
-void removeAllSubstringsFromString(std::string &str, const std::string &substr){
+void removeAllSubstrings(std::string &str, const std::string &substr){
     while(str.length() > 0 && str.find(substr) < str.length()){
         str.erase(str.find(substr), substr.length());
     }
+}
+
+bool isFreqSame(const int *freq, const int *windowFreq){
+    bool check = true;
+    for(int i = 0; i < 26; i++){
+        if(freq[i] != windowFreq[i]) check = false;
+    }
+    return check;
+}
+
+bool checkInclusion_N(std::string &s1, std::string &s2){
+    int freq[26] = {0};
+    for(int i = 0; i < s1.length(); i++) freq[s1[i] - 'a']++;
+
+    for(int i = 0; i < s2.length(); i++){
+        int idx = i, windowIdx = 0;
+        int windowFreq[26] = {0};
+        
+        while(windowIdx < s1.length() && idx < s2.length()){
+            windowFreq[s2[idx] - 'a']++;
+            windowIdx++; idx++;
+        }
+
+        if(isFreqSame(freq, windowFreq)) return true;
+    }
+    return false;
+}
+
+std::string reverseWords_N(std::string s){
+    reverseChar_M(s);
+    std::string ans = "";
+    for(int i = 0; i < s.length(); i++){
+        std::string word = "";
+        while(i < s.length() && s[i] != ' '){
+            word += s[i]; i++;
+        }
+        reverseChar_M(word);
+        if(word.length() > 0) ans = " " + word;
+    }
+    return ans.substr(1);
 }
 
 int main(){
@@ -94,8 +134,14 @@ int main(){
 
 
     // REMOVE ALL SUBSTRINGS FROM STRING
-    std::string str = "abcabcabc", substr = "abc";
-    removeAllSubstringsFromString(str, substr);
-    std::cout << str;
+    // std::string str = "abcabcabc", substr = "abc";
+    // removeAllSubstringsFromString(str, substr);
+    // std::cout << str;
+
+
+    // Permutation In String
+    // std::string s1 = "ba";
+    // std::string s2 = "eidboaoo";
+    // std::cout << checkInclusion_N(s1, s2);
     return 0;
 }
